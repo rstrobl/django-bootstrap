@@ -64,7 +64,7 @@ class BootstrapMixin(object):
                 output.append(self.render_field(field))
 
 
-        return separator.join(output)
+        return '<table class="zebra-striped">%s</table>' % (separator.join(output), )
 
     def render_field(self, field):
         """ Render a named field to HTML. """
